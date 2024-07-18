@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  partner_locator_db:
+    image: postgres:16.3-alpine3.18
+    container_name: partner_locator_db
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: partnerLocatorDB
+    ports:
+      - "5432:5432"
+    volumes:
+      - partner_locator_db_vol:/var/lib/postgresql/data
+    networks:
+      - dotLanchesNetwork
+
+volumes:
+  partner_locator_db_vol:
