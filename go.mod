@@ -1,6 +1,11 @@
 module partner-locator
 
-go 1.22.5
+go 1.20
+
+require (
+	github.com/gin-gonic/gin v1.10.0
+	gorm.io/gorm v1.25.11
+)
 
 require (
 	github.com/bytedance/sonic v1.11.9 // indirect
@@ -9,7 +14,6 @@ require (
 	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.4 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.10.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.22.0 // indirect
@@ -38,5 +42,4 @@ require (
 	google.golang.org/protobuf v1.34.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/postgres v1.5.9 // indirect
-	gorm.io/gorm v1.25.11 // indirect
 )
