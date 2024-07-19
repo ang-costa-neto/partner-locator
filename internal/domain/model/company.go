@@ -7,4 +7,5 @@ type Company struct {
 	CompanyName string
 	TradeName   string
 	Site        string
+	Address     Address
 }
