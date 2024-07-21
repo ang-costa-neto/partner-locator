@@ -10,6 +10,7 @@ import (
 
 type Application struct {
 	CompanyService service.CompanyService
+	UserService    service.UserService
 	DB             *gorm.DB
 }
 
@@ -19,8 +20,12 @@ func NewApplication() *Application {
 	companyRepo := repository.NewCompanyRepository(database)
 	companyService := service.NewCompanyService(companyRepo)
 
+	userRepo := repository.NewUserRepository(database)
+	userService := service.NewUserService(userRepo)
+
 	return &Application{
 		CompanyService: companyService,
+		UserService:    userService,
 		DB:             database,
 	}
 }
