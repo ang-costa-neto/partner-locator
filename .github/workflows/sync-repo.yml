@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    - uses: ang-costa-neto/sync-github-gitlab@v0.2
+    - uses: ang-costa-neto/sync-github-gitlab@v0.3
       with:
         target-url: ${{ secrets.TARGET_URL }}
         target-username: ${{ secrets.TARGET_USERNAME }}
